@@ -28,7 +28,7 @@ Además, los siguientes valores de la sección de "Resumen del periodo":
 
 Ejemplo de resultado procesado :
 {
-    "NO_CUENTA": "0807070895",
+    "NO_CUENTA": "0891234567",
     "NOMBRE_CLIENTE": "DANIEL PEREZ ATANACIO",
     "PERIODO": {
         "inicio": "01/01/2025",
@@ -36,9 +36,9 @@ Ejemplo de resultado procesado :
     },
     "FECHA_CORTE": "31/01/2025",
     "MONEDA": "PESOS",
-    "DEPOSITOS": $35960.00,
-    "RETIROS": $128631.36,
-    "SALDO_FINAL": $300287.24
+    "DEPOSITOS": $5960.00,
+    "RETIROS": $8631.36,
+    "SALDO_FINAL": $10000.24
 }
 
 Consideraciones:

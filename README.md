@@ -50,7 +50,6 @@ src/
 ├── types/
 │   └── SummaryItem.ts
 └── utils/
-    └── logger.ts
 ```
 
 
