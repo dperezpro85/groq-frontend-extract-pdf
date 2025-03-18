@@ -3,8 +3,8 @@ import path from 'path'
 import pdf from 'pdf-parse'
 import { NextResponse, NextRequest } from 'next/server'
 
-import logger from '@/infrastructure/logger/logger'
-import { createServices } from '@/services/factory'
+import logger from '@/backend/infrastructure/logger/logger'
+import { createServices } from '@/backend/services/factory'
 
 const { summaryService, groqService } = createServices()
 

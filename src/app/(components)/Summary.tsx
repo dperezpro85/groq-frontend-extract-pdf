@@ -2,17 +2,21 @@ import React, { useState } from 'react'
 import { Button, Flex, Layout, Select } from 'antd'
 import { SyncOutlined } from '@ant-design/icons'
 
-import api from '@/hooks/useGetSummary'
-import SummaryGraph from '@/components/SummaryGraph'
+import api from '@/app/(hooks)/useGetSummary'
+import SummaryGraph from '@/app/(components)/SummaryGraph'
 
 const yearOptions = Array.from({ length: 3 }, (_, i) => {
     const year = 2023 + i
-    return { label: year.toString(), value: year }
+    return { label: year.toString(), value: String(year) }
 })
 
+const shouldFetch = true
+
 const Summary: React.FC = () => {
-    const [year, setYear] = useState<number>(2024)
-    const querySummary = api.useGetSummary.useQuery({ year })
+    const [year, setYear] = useState<string>('2024')
+    const querySummary = api.useGetSummary.useQuery({ year }, {
+        enabled: Boolean(year) && shouldFetch,
+    })
 
     return (
         <Layout className="SummaryLayout h-full">
@@ -37,7 +41,13 @@ const Summary: React.FC = () => {
                 </Flex>
             </Layout.Header>
             <Layout.Content className="px-6">
-                {querySummary.isLoading ? <div>Cargando...</div> : querySummary.isSuccess && <SummaryGraph data={querySummary.data} />}
+                {querySummary.isLoading ? (
+                    <div className="text-white flex justify-center items-center">Cargando...</div>
+                ) : querySummary.isError ? (
+                    <div className="text-white flex justify-center items-center">Error al cargar los datos</div>
+                ) : (
+                    querySummary.isSuccess && <SummaryGraph data={querySummary.data} />
+                )}
             </Layout.Content>
         </Layout>
     )

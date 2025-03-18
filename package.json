@@ -3,7 +3,7 @@
   "version": "0.1.4",
   "private": true,
   "scripts": {
-    "postinstall": "prisma generate --schema=./src/infrastructure/database/prisma/schema.prisma",
+    "postinstall": "prisma generate --schema=./src/backend/infrastructure/database/prisma/schema.prisma",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
@@ -40,6 +40,6 @@
     "winston": "3.17.0"
   },
   "prisma": {
-    "schema": "./src/infrastructure/database/prisma/schema.prisma"
+    "schema": "./src/backend/infrastructure/database/prisma/schema.prisma"
   }
 }

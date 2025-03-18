@@ -1,7 +1,7 @@
 import prisma from '@/libs/prisma'
-import SummaryService from '@/services/SummaryService';
-import { ISummaryService } from '@/services/interfaces/ISummaryService';
-import { SummaryItemCreate } from '@/types/SummaryItem';
+import SummaryService from '@/backend/services/SummaryService';
+import { ISummaryService } from '@/backend/services/interfaces/ISummaryService';
+import { SummaryItemCreate } from '@/app/(types)/SummaryItem';
 
 
 export class SummaryServiceAdapter implements ISummaryService {

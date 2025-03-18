@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-import logger from '@/infrastructure/logger/logger'
-import { createServices } from '@/services/factory'
+import logger from '@/backend/infrastructure/logger/logger'
+import { createServices } from '@/backend/services/factory'
 
 const { summaryService } = createServices()
 

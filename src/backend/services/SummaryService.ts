@@ -1,8 +1,8 @@
 import dayjs from 'dayjs'
 import { PrismaClient } from '@prisma/client'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
-import { ISummaryService } from '@/services/interfaces/ISummaryService'
-import { SummaryItemCreate } from '@/types/SummaryItem'
+import { ISummaryService } from '@/backend/services/interfaces/ISummaryService'
+import { SummaryItemCreate } from '@/app/(types)/SummaryItem'
 
 dayjs.extend(customParseFormat)
 

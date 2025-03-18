@@ -1,4 +1,9 @@
-export type SummaryItem = {
+export interface Results<T> {
+    data: T
+    message: string
+}
+
+export interface SummaryItem {
     id: number
     year: string
     cuenta: string
@@ -10,7 +15,7 @@ export type SummaryItem = {
     saldo: number
 }
 
-export type SummaryItemCreate = {
+export interface SummaryItemCreate {
     NO_CUENTA: string
     NOMBRE_CLIENTE: string
     PERIODO: Record<string, string>

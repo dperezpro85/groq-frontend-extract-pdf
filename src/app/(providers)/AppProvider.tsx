@@ -1,18 +1,18 @@
 'use client'
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ConfigProvider, theme } from 'antd'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { ConfigProvider, theme } from "antd";
 
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
             refetchOnWindowFocus: false,
             retry: false,
-            staleTime: 1000 * 60 * 5,   // 5 minutes
+            staleTime: 1000 * 60 * 5, // 5 minutes
         },
     },
-});
+})
 
 const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
@@ -41,6 +41,6 @@ const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </QueryClientProvider>
         </ConfigProvider>
     )
-};
-    
-export default AppProvider;
+}
+
+export default AppProvider

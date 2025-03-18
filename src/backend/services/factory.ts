@@ -1,5 +1,5 @@
-import GroqService from '@/services/GroqService'
-import { SummaryServiceAdapter } from '@/adapters/SummaryServiceAdapter'
+import GroqService from '@/backend/services/GroqService'
+import { SummaryServiceAdapter } from '@/backend/adapters/SummaryServiceAdapter'
 import { ISummaryService } from './interfaces/ISummaryService'
 
 export function createServices() {
